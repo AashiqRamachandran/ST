@@ -16,6 +16,8 @@ Console.Write("Enter 2nd string\t");
 b = Console.ReadLine();
    if(a==b)
    Console.Write("A and B are equal");
+     else
+    Console.Write("A and B are not equal");
  }
  }
 }
