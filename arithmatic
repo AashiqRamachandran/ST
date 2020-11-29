@@ -1,0 +1,28 @@
+using System;
+using System.Collections;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace ConsoleApplication1
+{
+ public class calculation
+ {
+ static void Main(string[] args)
+ {
+ int num1, num2,sum,sub,mul,div;
+Console.Write("Enter 1st number\t");
+num1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter 2nd number\t");
+num2 = Convert.ToInt32(Console.ReadLine());
+sum=num1+num2;
+sub=num1-num2;
+mul=num1*num2;
+div=num1/num2;
+Console.Write("\n Sum "+sum);
+Console.Write("\n Substract "+sub);
+Console.Write("\n Multiplying "+mul);
+Console.Write("\n Divison "+div+"\n");
+ Console.ReadLine();
+ }
+ }
+ }
