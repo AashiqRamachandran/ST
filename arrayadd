@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace ConsoleApplication1
+{
+    public class arrsum
+    {
+        public int sum(int[] num1)
+        {
+            int res = 0;
+            for (int a = 0; a < num1.Length; a++)
+        {
+            res += num1[a];
+        }
+        return res;
+    }
+ }
+ 
+ class Program
+ {
+    static void Main(string[] args)
+    {
+        int[] num1 = { 1, 2, 3, 4, 5 };
+        int res;
+        Console.Write("\n 18-UCA-000 ");
+        Console.Write("\n The sum of the elements with numbers 1,2,3,4,5 are ");
+        arrsum cal = new arrsum();
+        res = cal.sum(num1);
+        Console.Write("\nsum={0}", res);
+        Console.ReadLine();
+    }
+ }
+}
