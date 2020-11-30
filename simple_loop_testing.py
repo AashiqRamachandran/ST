@@ -13,12 +13,12 @@ def slt():
     if n >= ub:
         print("Value is inside bounds and beginning loop testing.")
 
-        for i in range(0, n):  # for  i =0, i<n;i++
+        for i in range(0, 5):  # for  i =0, i<n;i++
             print("In execution " + str(i))
             if i == 4:
                 print("Time to execute till UB and UB-1")
 
-        for i in range(0, n):  # for i=0;i<n;i++
+        for i in range(0, 5):  # for i=0;i<n;i++
             print('In execution ' + str(i))
         print("Time to execute till n")
 
