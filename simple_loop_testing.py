@@ -9,7 +9,7 @@ def slt():
 
     if m > n:
         print("Value is out of bound.")
-    elif ub < = n:
+    if ub < = n:
         print("Value is inside bounds and beginning loop testing.")
         for i in range(0,n):
             print("In execution "+str(n))
