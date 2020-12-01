@@ -1,48 +1,47 @@
-import java.util.Scanner;
-public class robust
-{
-public static void main(String []args)
-{
-int x,y,z,n,lbx=20,lby=70,ubx=40,uby=110,lbz=30,ubz=80;
-int nomx, nomy, nomz;
-nomx=(lbx+ubx)/2;
-nomy=(lby+uby)/2;
-nomz=(lbz+ubz)/2;
-System.out.println("Lower and Upper bound of x"+lbx+" "+ubx);
-System.out.println("Lower and Upper bound of Y"+lby+" "+uby);
-System.out.println("Lower and Upper bound of z"+lbz+ ""+ubz);
-System.out.println("Nominal value of X Y and Z is"+nomx+" "+nomy+" "+nomz+"");
-System.out.println("Test points");
-System.out.println("X test Points "+" "+(lbx-1)+" "+lbx+" "+(lbx+1)+" "+nomx+" "+(ubx-1)+" "+ubx+" "+(ubx+1)+" ");
-System.out.println("y test Points "+" "+(lby-1)+" "+lby+" "+(lby+1)+" "+nomy+" "+(uby-1)+" "+uby+" "+(uby+1)+" ");
-System.out.println("Z test Points "+" "+(lbz-1)+" "+lbz+" "+(lbz+1)+" "+nomz+" "+(ubz-1)+" "+ubz+" "+(ubz+1)+" ");
-int tot=6*3+1;
-System.out.println("Test cases "+tot);
-System.out.println("\n Test cases are \n ");
-int[] xar={19,20,21,30,39,40,41 };
-int[] yar={69, 70,71,90,109,110 ,111};
-int[] zar={ 29,30,31,55,79,80,81};
-int k=1;
-for(int j=0;j<7;j++)
-{
-System.out.println(" "+k+"\t"+nomx+"\t"+nomy+"\t"+zar[j]+"\n");
-k=k+1;
-}
-for(int j=0;j<7;j++)
-{
-if(xar[j]!=nomx)
-{
-System.out.println(" "+k+"\t"+xar[j]+"\t"+nomy+"\t"+nomz+"\n");
-k=k+1;
-}//if
-}
-for(int j=0;j<7;j++)
-{
-if(yar[j]!=nomy)
-{
-System.out.println(" "+k+"\t"+nomx+"\t"+yar[j]+"\t"+nomz+"\n");
-k=k+1;
-}
-}
-}
-}
+def rbt():
+    lbx = 20  # changeme
+    ubx = 40  # changeme
+    lby = 70  # changeme
+    uby = 110 # changeme
+    lbz = 30  # changeme
+    ubz = 80  # changeme
+
+    nomx = (lbx + ubx) / 2
+    nomy = (lby + uby) / 2
+    nomz = (lbz + ubz) / 2
+
+    print(str(lbx) + ":" + str(ubx))
+    print(str(lby) + ":" + str(uby))
+    print(str(lbz) + ":" + str(ubz))
+
+    print(str(nomx) + ":" + str(nomy) + ":" + str(nomz))
+
+    xpoints = [(lbx - 1), lbx, (lbx + 1), nomx, (ubx - 1), ubx, (ubx + 1)]
+    ypoints = [(lby - 1), lby, (lby + 1), nomy, (uby - 1), uby, (uby + 1)]
+    zpoints = [(lbz - 1), lbz, (lbz + 1), nomz, (ubz - 1), ubz, (ubz + 1)]
+    cases = 6 * 3 + 1
+
+    print(str(cases))
+
+    print(str(xpoints))
+    print(str(ypoints))
+    print(str(zpoints))
+
+    count = 1
+
+    for i in range(0, 7):
+        print(str(count) + "\t" + str(nomx) + "\t" + str(nomy) + "\t" + str(zpoints[i]))
+        count += 1
+
+    for i in range(0, 7):
+        if ypoints[i] != nomy:
+            print(str(count) + "\t" + str(nomx) + "\t" + str(ypoints[i]) + "\t" + str(nomz))
+            count += 1
+
+    for i in range(0, 7):
+        if xpoints[i] != nomx:
+            print(str(count) + "\t" + str(xpoints[i]) + "\t" + str(nomy) + "\t" + str(nomz))
+            count += 1
+
+
+rbt()
